@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="fondAsh">
+        <div id="ashAnimate" class="ashFond"></div>
+        <div id="throwAnimate" class="throwFond"></div>
+    </div>
+
+    <div>
+        <button id="boom" type="button">BooM!</button>
+    </div>
+
+    <script src="test.js"></script>
+    <script>
+        boom.addEventListener('click', () => {
+            ashAnimate.classList.add('ashAnimate')
+            throwAnimate.classList.add('throwAnimate')
+            var delayInMillisecondsAsh = 700 
+            var delayInMillisecondsThrow = 1100 
+            setTimeout(function() {
+                ashAnimate.classList.remove('ashAnimate')
+            }, delayInMillisecondsAsh)
+            setTimeout(function() {
+                throwAnimate.classList.remove('throwAnimate')
+            }, delayInMillisecondsThrow)
+        })
+    </script>
+</body>
+</html>
