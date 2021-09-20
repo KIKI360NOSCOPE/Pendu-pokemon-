@@ -1,0 +1,163 @@
+
+@font-face {
+    font-family: 'Pokemon';
+    src: url("../font/Pokemon.ttf");
+}
+.pokeFont{
+    font-family: Pokemon;
+}
+.pokeFontHP{
+    font-family: Pokemon;
+    font-size: 1.4vh;
+}
+
+.panelBorder{
+    border: 25px solid transparent;
+    padding: 15px;
+    border-image: url(../img/panel.png) 120 stretch;
+}
+
+.player{
+    z-index: 200;
+}
+.playerPlacement{
+    width: 100vw;
+}
+
+.pokeTitle{
+    height: 7vh;
+}
+
+.hpBorder{
+    border: 15px solid transparent;
+    height: 50%;
+    width: 95%;
+    border-image: url(../random/hpborder.png) 0 799 799 799  stretch;
+}
+.btnBorder{
+    border: 1px solid transparent;
+    border-image: url(../random/btnBorder.png) 30 stretch;
+}
+
+
+.ballBorder{
+    border: 15px solid transparent;
+    border-image: url(../random/ballborder.png) 0 799 799 799  stretch;
+    height: 50%;
+    width: 95%;
+}
+.pokeballSize{
+    height: 30%;
+}
+
+.screen{
+    filter: sepia(50%);
+    background: rgb(245,222,179);
+    background: linear-gradient(180deg, rgba(245,222,179,1) 0%, rgba(255,255,255,1) 100%);
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 20vh 20vh 20vh;
+    grid-template-areas:
+        "HP HP POKEMON POKEMON"
+        "ASH ASH POKEMON POKEMON"
+        "ASH ASH POKEBALL POKEBALL";
+}
+.gridCenter{
+    display: grid;
+    place-items: center;
+}
+
+
+.divHP{
+    grid-area: HP;
+    z-index: 9;
+
+}
+
+
+.divPOKEMON{
+    grid-area: POKEMON;
+    z-index: 8;
+    position: relative;
+}
+.pokeOpacity{
+    opacity: 0;
+}
+
+.pokemonSize{
+    height: 30%;
+    z-index: 8;
+}
+.divPOKEMON::before{
+    position: absolute;
+    content: '';
+    background-color: black;
+    box-shadow: inset 0 0 10px rgba(255,255,255,1);
+    opacity: 15%;
+    height: 3vh;
+    width: 15vh;
+    border-radius: 50%;
+    bottom: 34%;
+}
+
+
+.divASH{
+    grid-area: ASH;
+    z-index: 10;
+}
+.ashSize{
+    height: 100%;
+}
+/******************************************/
+
+.AshBundle{
+    height: 30vh;
+    width: 30vh;
+}
+.throw{
+    left: 59%;
+    top: 55%;
+
+    height: 15%;
+    width: 15%;
+}
+.throwAnim{
+    animation: beforeanim 1300ms 300ms;
+}
+@keyframes beforeanim {
+    0%{
+        left: 59%;
+        top: 55%;
+    }
+    12.5%{
+        left: 1.5%;
+        top: 59%;
+    }
+    25%{
+        left: 3.5%;
+        top: 34%;
+    }
+    38%{
+        height: 15%;
+        width: 15%;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: 60vw;
+        top: -6vh;
+        height: 7%;
+        width: 7%;
+        transform: rotate(5900deg);
+    }
+}
+/******************************************/
+
+
+.divPOKEBALL{
+    grid-area: POKEBALL;
+    z-index: 9;
+}
+
+
+
+
